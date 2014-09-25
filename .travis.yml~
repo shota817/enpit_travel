@@ -1,0 +1,14 @@
+language: ruby
+rvm:
+- 2.0.0
+- 1.9.3
+- jruby-19mode
+- rbx-2
+deploy:
+  provider: heroku
+  api_key:
+    secure: cXkxEY6vloNTZzeQdLomXi/63czcMoC3U9OCZkuMaVQOpG/RWk7H738E8YXfn+GsB/pvPGLDJrf9lFPBvCdcEnJYP8T4RqpdT+hUKhUfUGKz+A1PoT9771Y15K6PS4Wt0gOlenqZWZjpAi1qG1fBOxoGfCobTA4wbpw1auOg+Pw=
+  app: peaceful-plains-3044
+  on:
+    repo: shota817/enpit_travel
+    branch: my_branch
