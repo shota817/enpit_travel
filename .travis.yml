@@ -8,7 +8,7 @@ deploy:
   app: peaceful-plains-3044
   on:
     repo: shota817/enpit_travel
-    branch: my_branch
+
 
 addons:
   postgresql: "9.3"
