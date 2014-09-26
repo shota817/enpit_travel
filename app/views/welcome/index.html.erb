@@ -2,3 +2,16 @@
 <p>
 The time is now: <%= Time.now %>
 </p>
+<form action="<%= search_path %>" method="POST">
+  <input type="input" name="keyword" required>
+  <input type="submit" value="search">
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+</form>
+
+<% if ! @jsonData.nil? %>
+<ul>
+    <% @jsonData['Items'].each do |item| %>
+    <li><%= link_to item['Item']['itemName'], item['Item']['affiliateUrl'] %></li>
+    <% end %>
+</ul>
+<% end %>
