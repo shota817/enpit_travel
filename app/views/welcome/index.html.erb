@@ -1,10 +1,12 @@
 <h2>Hello World</h2>
 
-<h1><%= link_to 'enPiT Travel', root_path %></h1>
+<h1><%= link_to 'enPiT Rakuten Item', root_path %></h1>
 <p>
 The time is now: <%= Time.now %>
 </p>
 <p>
-都道府県：<input type="text" name="name" size="40">
-<input type="submit" value="検索">
+<%= form_tag('/item/show', :method => :post) do %>
+商品名:<%= text_area_tag("item", "", :cols=>50 ) %>
+<%= submit_tag "Send" %>
+<% end %>
 </p>
